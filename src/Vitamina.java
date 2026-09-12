@@ -30,8 +30,8 @@ public class Vitamina {
         return funcao;
     }
 
-    public String getSintomaDeficiencia(){
-        return getSintomaDeficiencia();
+    public String getSintomaDeficiencia() {
+        return sintomaDeficiencia;
     }
 
     public String getFonteAlimentar() {
@@ -45,7 +45,40 @@ public class Vitamina {
     public String getVitaminaCura() {
         return vitaminaCura;
     }
-    
 
+    /*Aqui começa os Setters para quando precisar adicionar mais informações */
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setFuncao(String funcao) {
+        this.funcao = funcao;
+    }
+
+    public void setSintomaDeficiencia(String sintomaDeficiencia){
+        this.sintomaDeficiencia = sintomaDeficiencia;
+    }
+
+    public void setFonteAlimentar(String fonteAlimentar) {
+        this.fonteAlimentar = fonteAlimentar;
+    }
+
+    public void setDoseRecomendada(String doseRecomendada){
+        this.doseRecomendada = doseRecomendada;
+    }
+
+    public void setVitaminaCura(String vitaminaCura) {
+        this.vitaminaCura = vitaminaCura;
+    }
+
+    @Override
+    public String toString(){
+        return "Vitamina: " + nome +
+            "\n função: " + funcao +
+               "\n Sintomas da Deficiência: " + sintomaDeficiencia +
+                "\n Fonte Alimentar: " + fonteAlimentar +
+                    "\n Dose Recomendada: " + doseRecomendada +
+                        "\n Vitamina cura estes problemas: " + vitaminaCura;
+    }
 
 }

@@ -12,7 +12,10 @@ public class PessoaPOO {
 
     /*Setter - Criação de Setter, Settar o valor da variável*/
 
-
+    public void SetNome(String nome){
+        this.nome = nome;
+        System.out.println("Mude o nome");
+    }
 
 
 

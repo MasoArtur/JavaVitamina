@@ -26,36 +26,53 @@
 //}
 
 
+//public class Main {
+//     public static void main(String[] args){
+//
+//         //CRIAÇÃO DE OBJETOS objeto1
+//         PessoaPOO marcos = new PessoaPOO(); // a 2 parte é um novo e o nome da classe, referenciando como um METODO
+//         //acessar atributos da classe
+//         marcos.SetNome("Marcos");
+//         marcos.manco(); // tem acesso ao metodo ateaves do . e nome do atributo
+//         marcos.chatice();
+//
+////         //objeto 2
+////         PessoaPOO maristela = new PessoaPOO();
+////         maristela.nome = "Maristela";
+//
+//         // herança
+//         inteligencia maristela = new inteligencia();
+//         maristela.inteligenciaBoa();
+//         maristela.familia = "Thibes De Campos e Maso";
+//         System.out.println(maristela.familia);
+//         maristela.chatice();
+//         maristela.chatice(1);
+//
+//                                // não precisa explicitar o tipo dentro do mostrarFuncao, o java mesmo coloca pelo parametro anterior
+//
+//            mostrarFuncao(  "VitaminaD ", "Auxiliar produção de testosterona e imunidade", 1); // passou parametro embaixo tem que passar valor aqui dentro
+//
+//    }
+//
+//    private static void mostrarFuncao(String nome, String funcao ,int qntDosagem){ // void significa que não vai retornar nada, TEM QUE PASSAR TIPO PRA PARAMETRO
+//    System.out.println(nome + funcao + qntDosagem);
+//    }
+//}
+
 public class Main {
-     public static void main(String[] args){
 
-         //CRIAÇÃO DE OBJETOS objeto1
-         PessoaPOO marcos = new PessoaPOO(); // a 2 parte é um novo e o nome da classe, referenciando como um METODO
-         //acessar atributos da classe
-         marcos.nome = "Marcos";
-         System.out.println(marcos.nome);
-         marcos.manco(); // tem acesso ao metodo ateaves do . e nome do atributo
-         marcos.chatice();
+    public static void main(String [] args){
+        Vitamina vitamina1 = new Vitamina("Vitamina C", "", "", "", "", "");
+        Vitamina vitamina2 = new Vitamina("Vitamina D", "", "", "", "", "");
 
-//         //objeto 2
-//         PessoaPOO maristela = new PessoaPOO();
-//         maristela.nome = "Maristela";
 
-         // herança
-         inteligencia maristela = new inteligencia();
-         maristela.inteligenciaBoa();
-         maristela.familia = "Thibes De Campos e Maso";
-         System.out.println(maristela.familia);
-         maristela.chatice();
-         maristela.chatice(1);
+        System.out.println(vitamina1);
+        /*Puxa o getter p teste */
+        System.out.println(vitamina1.getNome());
 
-                                // não precisa explicitar o tipo dentro do mostrarFuncao, o java mesmo coloca pelo parametro anterior
-
-            mostrarFuncao(  "VitaminaD ", "Auxiliar produção de testosterona e imunidade", 1); // passou parametro embaixo tem que passar valor aqui dentro
-
-    }
-
-    private static void mostrarFuncao(String nome, String funcao ,int qntDosagem){ // void significa que não vai retornar nada, TEM QUE PASSAR TIPO PRA PARAMETRO
-    System.out.println(nome + funcao + qntDosagem);
+        /*Teste do setter */
+        System.out.println(vitamina1.getNome());
+        vitamina1.setNome("Mudando nome");
+        System.out.println(vitamina1.getNome());
     }
 }
