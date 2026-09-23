@@ -36,6 +36,9 @@
 //         marcos.manco(); // tem acesso ao metodo ateaves do . e nome do atributo
 //         marcos.chatice();
 //
+
+import java.sql.SQLOutput;
+
 ////         //objeto 2
 ////         PessoaPOO maristela = new PessoaPOO();
 ////         maristela.nome = "Maristela";
@@ -61,10 +64,30 @@
 
 public class Main {
 
+    class Remedio{
+        String nome;
+
+        public Remedio(String nome){
+            this.nome = nome;
+        }
+    }
+
+    public void medico(Remedio remedio){
+        System.out.println("O médico recomendou " + remedio.nome);
+    }
+
+
     public static void main(String [] args){
         Vitamina vitamina1 = new Vitamina("Vitamina C", "", "", "", "", "");
         Vitamina vitamina2 = new Vitamina("Vitamina D", "", "", "", "", "");
 
+        Main app = new Main();
+        Main.Remedio nomeRemedio = app.new Remedio("Acido ascórbico");
+
+        app.medico(nomeRemedio);
+        System.out.println(nomeRemedio.nome);
+
+//        remedio nomeRemedio = new remedio("Acido ascorbico");
 
         System.out.println(vitamina1);
         /*Puxa o getter p teste */
